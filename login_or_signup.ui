@@ -1,0 +1,852 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>374</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+	background-color: #25273e;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>-30</y>
+      <width>374</width>
+      <height>631</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Revard</family>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTabWidget::pane {
+	border: 1px;
+	background-color: #25273e;
+}
+
+QTabBar::tab {
+	color: rgb(202, 204, 213);
+	margin-left: 1px;
+	padding-top: 5px;
+	min-width: 30ex;
+	min_heigth: 20ex;
+	background-color: rgb(86, 91, 145);
+	left: -1px;
+}
+
+QTabBar::tab:selected {
+	background-color: #25273e;
+}
+
+QTabBar::tab:hover {
+	background-color: rgb(61, 65, 103);
+}</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <property name="font">
+      <font>
+       <family>Salwey</family>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <attribute name="title">
+      <string>Log In</string>
+     </attribute>
+     <widget class="QPushButton" name="show_pass_1">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>220</y>
+        <width>41</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Rounded MT Bold</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #a2a5b6;
+background-color: #25273e;
+border: 0px</string>
+      </property>
+      <property name="text">
+       <string>Show</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_ques">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>560</y>
+        <width>191</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Rounded MT Bold</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #b7b9c2</string>
+      </property>
+      <property name="text">
+       <string>Don't have an account?</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="line_username">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>150</y>
+        <width>334</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Rounded MT Bold</family>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+	padding-left: 10px;
+	border: 2px solid #533e5a;
+	border-radius: 15px;
+	background-color: rgb(37, 39, 62);
+	color: rgb(255, 255, 255)
+}
+
+QLineEdit::focus, active {
+	background-color: rgb(37, 39, 62);
+	color: rgb(198, 198, 198)
+}
+
+</string>
+      </property>
+      <property name="inputMask">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="maxLength">
+       <number>28</number>
+      </property>
+      <property name="frame">
+       <bool>true</bool>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Normal</enum>
+      </property>
+      <property name="dragEnabled">
+       <bool>false</bool>
+      </property>
+      <property name="placeholderText">
+       <string>Username</string>
+      </property>
+      <property name="clearButtonEnabled">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_rememb">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>270</y>
+        <width>140</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Rounded MT Bold</family>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QCheckBox {
+	color: #a2a5b6;
+}
+
+QCheckBox::indicator:unchecked {
+	border: 1px solid white;
+	background-color: #25273e
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Remember me</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="line_password">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>210</y>
+        <width>334</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Rounded MT Bold</family>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+	padding-left: 10px;
+	border: 2px solid #533e5a;
+	border-radius: 15px;
+	background-color: rgb(37, 39, 62);
+	color: rgb(255, 255, 255)
+}
+
+QLineEdit::focus, active {
+	background-color: rgb(37, 39, 62);
+	color: rgb(198, 198, 198)
+}</string>
+      </property>
+      <property name="maxLength">
+       <number>28</number>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+      <property name="placeholderText">
+       <string>Password</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_forgot">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>268</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>VAG World</family>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(167, 71, 112);
+background-color: #25273e;
+border: 0px</string>
+      </property>
+      <property name="text">
+       <string>Forgot password</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_log_in">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>40</y>
+        <width>160</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Rounded MT Bold</family>
+        <pointsize>35</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(202, 204, 213)</string>
+      </property>
+      <property name="text">
+       <string>Log In</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_log_in">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>340</y>
+        <width>200</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Rounded MT Bold</family>
+        <pointsize>20</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 10px;
+text-align: center;
+color: rgb(252, 229, 240);
+background-color: rgb(238, 58, 87)</string>
+      </property>
+      <property name="inputMethodHints">
+       <set>Qt::ImhNone</set>
+      </property>
+      <property name="text">
+       <string>Log In</string>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="default">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_ques_sign_up">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>560</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Rounded MT Bold</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(167, 71, 112);
+background-color: #25273e;
+border: 0px</string>
+      </property>
+      <property name="text">
+       <string>Sign up</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>120</y>
+        <width>331</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Dubai Medium</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(189, 0, 0)</string>
+      </property>
+      <property name="text">
+       <string>Пользователь с таким именем не найден</string>
+      </property>
+     </widget>
+     <zorder>line_username</zorder>
+     <zorder>checkBox_rememb</zorder>
+     <zorder>line_password</zorder>
+     <zorder>btn_forgot</zorder>
+     <zorder>label_log_in</zorder>
+     <zorder>btn_log_in</zorder>
+     <zorder>btn_ques_sign_up</zorder>
+     <zorder>label_ques</zorder>
+     <zorder>show_pass_1</zorder>
+     <zorder>label</zorder>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Sign Up</string>
+     </attribute>
+     <widget class="QLineEdit" name="line_email">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>190</y>
+        <width>334</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Rounded MT Bold</family>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+	padding-left: 10px;
+	border: 2px solid #533e5a;
+	border-radius: 15px;
+	background-color: rgb(37, 39, 62);
+	color: rgb(255, 255, 255)
+}
+
+QLineEdit::focus, active {
+	background-color: rgb(37, 39, 62);
+	color: rgb(198, 198, 198)
+}
+
+</string>
+      </property>
+      <property name="inputMask">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="maxLength">
+       <number>28</number>
+      </property>
+      <property name="frame">
+       <bool>true</bool>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Normal</enum>
+      </property>
+      <property name="dragEnabled">
+       <bool>false</bool>
+      </property>
+      <property name="placeholderText">
+       <string>Email</string>
+      </property>
+      <property name="clearButtonEnabled">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="line_username_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>140</y>
+        <width>161</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Rounded MT Bold</family>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+	padding-left: 10px;
+	border: 2px solid #533e5a;
+	border-radius: 15px;
+	background-color: rgb(37, 39, 62);
+	color: rgb(255, 255, 255)
+}
+
+QLineEdit::focus, active {
+	background-color: rgb(37, 39, 62);
+	color: rgb(198, 198, 198)
+}
+
+</string>
+      </property>
+      <property name="inputMask">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="maxLength">
+       <number>28</number>
+      </property>
+      <property name="frame">
+       <bool>true</bool>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Normal</enum>
+      </property>
+      <property name="dragEnabled">
+       <bool>false</bool>
+      </property>
+      <property name="placeholderText">
+       <string>Username</string>
+      </property>
+      <property name="clearButtonEnabled">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="line_password_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>240</y>
+        <width>334</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Rounded MT Bold</family>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+	padding-left: 10px;
+	border: 2px solid #533e5a;
+	border-radius: 15px;
+	background-color: rgb(37, 39, 62);
+	color: rgb(255, 255, 255)
+}
+
+QLineEdit::focus, active {
+	background-color: rgb(37, 39, 62);
+	color: rgb(198, 198, 198)
+}</string>
+      </property>
+      <property name="maxLength">
+       <number>28</number>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+      <property name="placeholderText">
+       <string>Password</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_agree">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>340</y>
+        <width>301</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Rounded MT Bold</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QCheckBox {
+	color: #a2a5b6;
+}
+
+QCheckBox::indicator:unchecked {
+	border: 1px solid white;
+	background-color: #25273e
+}
+</string>
+      </property>
+      <property name="text">
+       <string>I agree with privacy and policy</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_show_conf_pas">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>300</y>
+        <width>41</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Rounded MT Bold</family>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #a2a5b6;
+background-color: #25273e;
+border: 0px</string>
+      </property>
+      <property name="text">
+       <string>Show</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="line_phone">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>140</y>
+        <width>161</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Rounded MT Bold</family>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+	padding-left: 10px;
+	border: 2px solid #533e5a;
+	border-radius: 15px;
+	background-color: rgb(37, 39, 62);
+	color: rgb(255, 255, 255)
+}
+
+QLineEdit::focus, active {
+	background-color: rgb(37, 39, 62);
+	color: rgb(198, 198, 198)
+}
+
+</string>
+      </property>
+      <property name="inputMask">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="maxLength">
+       <number>28</number>
+      </property>
+      <property name="frame">
+       <bool>true</bool>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Normal</enum>
+      </property>
+      <property name="dragEnabled">
+       <bool>false</bool>
+      </property>
+      <property name="placeholderText">
+       <string>Phone</string>
+      </property>
+      <property name="clearButtonEnabled">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_sigh_up">
+      <property name="geometry">
+       <rect>
+        <x>85</x>
+        <y>400</y>
+        <width>200</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Rounded MT Bold</family>
+        <pointsize>20</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 10px;
+text-align: center;
+color: rgb(252, 229, 240);
+background-color: rgb(238, 58, 87)</string>
+      </property>
+      <property name="inputMethodHints">
+       <set>Qt::ImhNone</set>
+      </property>
+      <property name="text">
+       <string>Sign Up</string>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="default">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_show_pas">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>250</y>
+        <width>41</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Rounded MT Bold</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #a2a5b6;
+background-color: #25273e;
+border: 0px</string>
+      </property>
+      <property name="text">
+       <string>Show</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_sign_up">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>40</y>
+        <width>181</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Rounded MT Bold</family>
+        <pointsize>35</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(202, 204, 213)</string>
+      </property>
+      <property name="text">
+       <string>Sign Up</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_ques_2">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>560</y>
+        <width>191</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Rounded MT Bold</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #b7b9c2</string>
+      </property>
+      <property name="text">
+       <string>Already have an account?</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="line_confirm_password">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>290</y>
+        <width>334</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Rounded MT Bold</family>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+	padding-left: 10px;
+	border: 2px solid #533e5a;
+	border-radius: 15px;
+	background-color: rgb(37, 39, 62);
+	color: rgb(255, 255, 255)
+}
+
+QLineEdit::focus, active {
+	background-color: rgb(37, 39, 62);
+	color: rgb(198, 198, 198)
+}</string>
+      </property>
+      <property name="maxLength">
+       <number>28</number>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+      <property name="placeholderText">
+       <string>Confirm Password</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_ques_sign_in">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>560</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Rounded MT Bold</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(167, 71, 112);
+background-color: #25273e;
+border: 0px</string>
+      </property>
+      <property name="text">
+       <string>Sign in</string>
+      </property>
+     </widget>
+     <zorder>line_email</zorder>
+     <zorder>line_username_2</zorder>
+     <zorder>line_password_2</zorder>
+     <zorder>checkBox_agree</zorder>
+     <zorder>line_phone</zorder>
+     <zorder>btn_sigh_up</zorder>
+     <zorder>label_sign_up</zorder>
+     <zorder>line_confirm_password</zorder>
+     <zorder>btn_ques_sign_in</zorder>
+     <zorder>label_ques_2</zorder>
+     <zorder>btn_show_pas</zorder>
+     <zorder>btn_show_conf_pas</zorder>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
