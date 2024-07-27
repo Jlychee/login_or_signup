@@ -1,4 +1,5 @@
 import sqlite3
+import hashlib
 
 database = sqlite3.connect("user_inf.db")
 cursor = database.cursor()
@@ -22,7 +23,7 @@ def sign_up(usernm, ph, mail, passw):
         return 'Пользователь с таким email сущесвует'
     else:
         cursor.execute('INSERT INTO user(username, phone, email, password) VALUES (?, ?, ?, ?)',
-                       (f'{usernm}', f'{ph}', f'{mail}', f'{passw}'))
+                       (f'{usernm}', f'{ph}', f'{mail}', f'{hashlib.sha256(passw.encode()).hexdigest()}'))
 
         database.commit()
         return 'Успешная регистрация'
@@ -33,7 +34,7 @@ def log_in(usern, password):
     if pas is None:
         return 'Пользователь с таким именем не найден'
     else:
-        if str(pas[0]) == str(password):
+        if str(pas[0]) == str(hashlib.sha256(password.encode()).hexdigest()):
             return 'Успешный вход!'
         else:
             return 'Неверный пароль'
